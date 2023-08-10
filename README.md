@@ -68,5 +68,5 @@ redirected to the service running on port 8080.
 ## Health check
 
 To make sure the proxy is running properly, after starting your docker container
-you can go to https://localhost/health and you should see an "`I am alive!`" text
+you can go to https://localhost/proxy_health and you should see an "`I am alive!`" text
 in your browser.
