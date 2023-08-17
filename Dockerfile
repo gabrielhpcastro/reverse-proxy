@@ -2,6 +2,7 @@ FROM nginx:alpine
 
 #ENV VARIABLES
 ENV PORT=8080
+ENV SCHEME=http
 
 # COPY PUBLIC FILES
 COPY public /usr/share/nginx/html

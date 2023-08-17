@@ -41,10 +41,13 @@ docker run -p 433:433 -d reverse-proxy
 ```
 
 The proxy should already be working. If you try to access https://localhost you
-should be redirected to the service running on port 8080.
+should be redirected to the service running on port http://localhost:8080.
 
-> 💡 If you want your reverse proxy to redirect you to another port, just include
-> `-e PORT=${PORT}` in your `docker run`.
+> 💡 If you want your reverse proxy to redirect you to another port or to an
+> https server you can provide the following env variables when running
+> `docker run`:
+> `-e PORT={port_number}` to set the server port (default is 8080)
+> `-e SCHEME={http | https}` to set the server scheme (default is http)
 
 ### Setting a URL in the hosts file
 
