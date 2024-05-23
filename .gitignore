@@ -1,0 +1,3 @@
+# SSL certification files
+ssl/cert.pem
+ssl/key.pem
