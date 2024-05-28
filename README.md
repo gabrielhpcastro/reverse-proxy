@@ -27,6 +27,8 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ./ssl/key.pem -out .
 
 ## Deploying the reverse proxy
 
+### Using docker
+
 - In order to deploy your reverse proxy first you should build the docker image
   by running:
 
@@ -48,6 +50,17 @@ should be redirected to the service running on port http://localhost:8080.
 > `docker run`:
 > `-e PORT={port_number}` to set the server port (default is 8080)
 > `-e SCHEME={http | https}` to set the server scheme (default is http)
+
+### Using docker-compose
+
+- In order to deploy your reverse proxy first you should copy the `.env.example`
+  file and rename it to `.env` updating the values inside of the file.
+
+- Then run the command to start your container:
+
+```bash
+docker-compose up -d
+```
 
 ### Setting a URL in the hosts file
 
