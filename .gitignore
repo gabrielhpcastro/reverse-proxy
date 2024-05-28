@@ -1,3 +1,2 @@
-# SSL certification files
-ssl/cert.pem
-ssl/key.pem
+# Environment variables
+.env

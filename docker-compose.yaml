@@ -1,0 +1,9 @@
+version: '3'
+services:
+  reverse-proxy:
+    build: .
+    environment:
+      - SCHEME=${SCHEME}
+      - PORT=${PORT}
+    ports:
+      - '443:443'
