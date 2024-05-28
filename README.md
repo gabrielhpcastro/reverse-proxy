@@ -8,7 +8,7 @@ nginx in order to serve local projects using HTTPS.
 In order to have the reverse proxy in Docker you will need a valid SSL certificate
 and key.
 
-These are available in the ssl folder. They are valid until **10.08.2023**. In case
+These are available in the ssl folder. They are valid until **28.05.2025**. In case
 the certificate and key are no longer valid, follow the steps bellow to create new
 ones and push them to the repository. _💡 Don't forget to update the date above._
 
@@ -26,6 +26,8 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ./ssl/key.pem -out .
 > 💡 The new certificate and key will be valid for 365 days.
 
 ## Deploying the reverse proxy
+
+### Using docker
 
 - In order to deploy your reverse proxy first you should build the docker image
   by running:
@@ -48,6 +50,17 @@ should be redirected to the service running on port http://localhost:8080.
 > `docker run`:
 > `-e PORT={port_number}` to set the server port (default is 8080)
 > `-e SCHEME={http | https}` to set the server scheme (default is http)
+
+### Using docker-compose
+
+- In order to deploy your reverse proxy first you should copy the `.env.example`
+  file and rename it to `.env` updating the values inside of the file.
+
+- Then run the command to start your container:
+
+```bash
+docker-compose up -d
+```
 
 ### Setting a URL in the hosts file
 
