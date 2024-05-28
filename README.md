@@ -8,7 +8,7 @@ nginx in order to serve local projects using HTTPS.
 In order to have the reverse proxy in Docker you will need a valid SSL certificate
 and key.
 
-These are available in the ssl folder. They are valid until **10.08.2023**. In case
+These are available in the ssl folder. They are valid until **28.05.2025**. In case
 the certificate and key are no longer valid, follow the steps bellow to create new
 ones and push them to the repository. _💡 Don't forget to update the date above._
 
